@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Pony";
+  src: url("./../../assets/font/Pony.ttf");
+}
+.bookingMovie {
+  font-family: "Pony";
+  background: url("./../../assets/images/bgmovie.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.bookingMovie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.574); /* Màu đen với độ mờ */
+  /* z-index: 1; */
+}
+
+table,
+th,
+td {
+  border: 1px solid white;
+}
+.table {
+  border-collapse: collapse;
+}

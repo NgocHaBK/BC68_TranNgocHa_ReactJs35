@@ -1,0 +1,70 @@
+.ghe {
+  border: 3px solid orange;
+  width: 45px;
+  height: 35px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.left {
+  z-index: 1;
+}
+.rowNumber {
+  /* font-size: 25px; */
+  width: 45px;
+  height: 35px;
+  background: none;
+  border: none;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  font-size: 20px;
+  color: yellow;
+  z-index: 1;
+}
+
+.firstChar {
+  color: yellow;
+  font-size: 35px;
+  text-align: right;
+  margin-right: 760px;
+}
+
+.screen {
+  border-bottom: 50px solid rgb(255, 159, 95);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 100;
+  width: 80%;
+  filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+  font-size: 25px;
+  color: #fff;
+}
+
+.gheDuocChon {
+  border: 3px solid orange;
+
+  background: orange;
+  color: #000;
+
+  cursor: no-drop !important;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+
+.gheDangChon {
+  background: rgb(109, 238, 109);
+  border: 3px solid rgb(109, 238, 109);
+  color: #000;
+
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+.rowContainer {
+  position: relative;
+}
+.rowContainer .rowDetail {
+  position: absolute;
+  left: -40px;
+}
