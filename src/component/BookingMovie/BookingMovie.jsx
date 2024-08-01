@@ -50,7 +50,7 @@ const BookingMovie = () => {
     if (booking.length != 0) {
       console.log("booking: ", booking[0]);
       return (
-        <div className="grid grid-cols-12 gap-3 ">
+        <div className="grid grid-cols-12 gap-5">
           {Object.entries(booking[0]).map(([key, value], index) => {
             console.log("key: ", key, value);
             if (key !== "hang") {
@@ -89,10 +89,10 @@ const BookingMovie = () => {
                 );
               else {
                 return (
-                  <div className="grid grid-cols-12 gap-8 rowDetail">
+                  <div className="grid grid-cols-12 gap-7 rowDetail">
                     {value.map((item, index_) => {
                       return (
-                        <button
+                        <p
                           className={`ghe ${
                             item.daDat
                               ? "gheDuocChon"
@@ -105,7 +105,7 @@ const BookingMovie = () => {
                           onClick={() => handleCellClick(index - 1, index_)}
                         >
                           {item.soGhe}
-                        </button>
+                        </p>
                       );
                     })}
                   </div>
@@ -126,6 +126,11 @@ const BookingMovie = () => {
       ...row,
       danhSachGhe: row.danhSachGhe.map((seat) => ({ ...seat })),
     }));
+    let newChosenPos = chosenPos.map((row) => {
+      console.log("row: ", row);
+      return [...row];
+    });
+    console.log("newChosenPos: ", newChosenPos);
     const originalParsedLetter = "A".charCodeAt(0);
     console.log("originalParsedLetter: ", originalParsedLetter);
     ClonedBooking.forEach((item, indexRow) => {
@@ -197,6 +202,7 @@ const BookingMovie = () => {
       }
     });
     console.log("newBookedTickets: ", newBookedTickets);
+    setChosenPos(new Array(10).fill(new Array(12).fill(false)));
     dispatch(updateBooking(newBookedTickets));
   };
   return (
