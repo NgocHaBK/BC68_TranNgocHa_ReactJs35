@@ -50,7 +50,7 @@ const BookingMovie = () => {
     if (booking.length != 0) {
       console.log("booking: ", booking[0]);
       return (
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid grid-cols-12 gap-2">
           {Object.entries(booking[0]).map(([key, value], index) => {
             console.log("key: ", key, value);
             if (key !== "hang") {
